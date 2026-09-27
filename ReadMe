@@ -1,0 +1,10 @@
+## Email Configuration
+
+For security reasons, actual SMTP credentials are not hardcoded in the repository. 
+
+To test email notifications:
+1. Open `contact.php` (or set environment variables).
+2. Update `$smtpUsername` and `$smtpPassword` with valid Gmail SMTP / App Password credentials:
+   ```php
+   $smtpUsername = 'your-actual-email@gmail.com';
+   $smtpPassword = 'your-app-password';
