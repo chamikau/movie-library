@@ -87,11 +87,10 @@ if (file_put_contents(
 ) === false) {
     errorResponse('Could not save your submission.', 500);
 }
-
 $smtpHost       = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
 $smtpPort       = (int)(getenv('SMTP_PORT') ?: 587);
-$smtpUsername   = getenv('SMTP_USERNAME') ?: '';
-$smtpPassword   = getenv('SMTP_PASSWORD') ?: '';
+$smtpUsername   = getenv('SMTP_USERNAME') ?: 'your-email@gmail.com';
+$smtpPassword   = getenv('SMTP_PASSWORD') ?: 'your-app-password';
 $smtpFromEmail  = getenv('SMTP_FROM_EMAIL') ?: $smtpUsername;
 $smtpFromName   = 'Movie Library';
 
